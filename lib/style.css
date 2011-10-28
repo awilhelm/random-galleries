@@ -1,0 +1,163 @@
+
+@font-face {
+src: url(Museo300-Regular.otf);
+font-family: 'Museo';
+font-weight: 300;
+}
+
+@font-face {
+src: url(Museo500-Regular.otf);
+font-family: 'Museo';
+font-weight: 500;
+}
+
+@font-face {
+src: url(Museo700-Regular.otf);
+font-family: 'Museo';
+font-weight: 700;
+}
+
+* {
+outline: none;
+}
+
+body {
+background: #222;
+color: silver;
+font-family: 'Museo';
+margin: 2ex 2em;
+overflow-x: hidden;
+}
+
+h1 {
+font-family: 'Museo';
+font-size: 300%;
+font-weight: 300;
+margin: 0;
+}
+
+em {
+color: white;
+font-style: normal;
+font-weight: bolder;
+}
+
+:link,
+:visited {
+color: white;
+text-decoration: inherit;
+}
+
+:link:hover,
+:visited:hover {
+color: inherit;
+text-decoration: underline;
+}
+
+#collection,
+#gallery,
+#image,
+.stats {
+background: #333;
+border: medium solid #222;
+box-shadow: black 0 0 2em 0;
+-moz-box-shadow: black 0 0 2em 0;
+-webkit-box-shadow: black 0 0 2em 0;
+}
+
+#collection {
+margin: 0 -4em;
+padding: 1.5ex 4em;
+width: 100%;
+}
+
+#collection a::after {
+content: attr(title);
+display: none;
+font-size: larger;
+position: absolute;
+right: 2em;
+z-index: 0;
+}
+
+#collection a:hover::after {
+display: inline;
+}
+
+#gallery {
+float: right;
+margin: -4ex 10% 4ex;
+max-width: 20em;
+padding: 4ex 2em 100%;
+text-align: center;
+}
+
+#collection img,
+#gallery img {
+border: none;
+box-shadow: black 0 0 1em 0;
+margin: .5ex .5em;
+position: relative;
+vertical-align: middle;
+z-index: 1;
+-moz-box-shadow: black 0 0 1em 0;
+-webkit-box-shadow: black 0 0 1em 0;
+}
+
+#collection img:hover,
+#gallery img:hover {
+box-shadow: red 0 0 1em 0;
+-moz-box-shadow: red 0 0 1em 0;
+-webkit-box-shadow: red 0 0 1em 0;
+}
+
+#collection img:active,
+#gallery img:active {
+box-shadow: none;
+-moz-box-shadow: none;
+-webkit-box-shadow: none;
+}
+
+#image {
+cursor: crosshair;
+display: none;
+left: 2em;
+padding: 2ex 1em;
+position: fixed;
+top: 2ex;
+z-index: 2;
+}
+
+#image.selected {
+display: inline-block;
+}
+
+.stats {
+border-collapse: collapse;
+float: left;
+margin: 2ex 4em 8ex 0;
+table-layout: fixed;
+width: 30em;
+}
+
+caption {
+font-size: larger;
+}
+
+.stats th,
+.stats td {
+padding: 0 .5em;
+}
+
+.stats th {
+text-align: left;
+}
+
+.stats td {
+text-align: right;
+}
+
+tr:hover {
+background: #222;
+}
+

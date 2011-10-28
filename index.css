@@ -1,0 +1,21 @@
+
+body {
+max-width: 60em;
+margin: auto;
+padding: 2ex 2em;
+padding-bottom: 100%;
+}
+
+hr {
+border: none;
+border-bottom: thin dotted;
+clear: both;
+margin: 8ex 0 4ex;
+}
+
+.main-photo {
+float: right;
+margin-left: 2em;
+box-shadow: 0 0 1ex 0 black;
+}
+

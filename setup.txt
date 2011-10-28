@@ -1,0 +1,23 @@
+
+MISE EN ROUTE
+
+1.	Éditer le fichier config.ini pour configurer l'application.
+
+2.	Uploader tous les fichiers sur le serveur. Le fichier index.php peut être renommé et doit être là où on souhaite que l'application soit. Le fichier config.ini doit être dans le même dossier que index.php. Le dossier lib peut être renommé et doit être à l'emplacement indiqué par la clé install-path de config.ini, relativement à index.php.
+
+3.	Appeler index.php?do=make-pool pour explorer le dossier des images et établir la liste des images disponibles.
+
+4.	Appeler index.php?do=make-thumbnails pour générer des miniatures pour toutes les images disponibles. Ce traitement peut être long. En cas d'erreur, recharger la page jusqu'à ce que le traitement soit terminé.
+
+5.	Après un changement dans la collection d'images, appeler index.php?do=clean-thumbnails pour supprimer les miniatures qui ne correspondent plus à une image dans la collection.
+
+6.	Appeler index.php et vérifier que tout fonctionne.
+
+
+
+PERSONNALISATION
+
+Les pages HTML pour afficher la collection, les galeries et les images peuvent être modifiées en éditant directement les fichiers lib/view-collection.php, lib/view-gallery.php et lib/view-image.php.
+
+Le fichier text.ini contient les noms et les descriptions des galeries. Pour chaque galerie il doit contenir une section avec les clés name, description, et éventuellement d'autres clés jugées nécessaires, ou seulement name ou description, ou rien du tout.
+
